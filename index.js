@@ -6,7 +6,15 @@ const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
 });
+// Add a route to handle requests to the root URL
+app.receiver.app.get('/', (req, res) => {
+  res.send('Slack PureVoice Bot is running!');
+});
 
+(async () => {
+  await app.start(process.env.PORT || 3000);
+  console.log('⚡️ Slack PureVoice Bot is running!');
+})();
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
