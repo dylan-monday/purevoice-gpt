@@ -1,17 +1,16 @@
 {
   "name": "purevoice-gpt",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
- "scripts": {
-  "start": "node index.js"
- }
+  "scripts": {
+    "start": "node index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@slack/bolt": "^4.2.1",
-    "dotenv": "^16.4.7",
-    "openai": "^4.87.3"
+    "@slack/bolt": "^3.12.2",
+    "openai": "^4.19.1"
   }
 }
